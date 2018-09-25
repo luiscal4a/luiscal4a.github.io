@@ -1,0 +1,10 @@
+.section-data .fa-3x{
+	margin: 10px 5px;
+}
+
+.iris {
+    background-image: url("../img/header-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
