@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/main.css">
 
     <!--Let browser know website is optimized for mobile-->
@@ -20,7 +22,7 @@
       <nav class="blue darken-3">
        <div class="container">
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Luis de la Cal</a>
+          <a href="#!" class="brand-logo truncate" id="title">Luis de la Cal</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li>
@@ -30,7 +32,7 @@
              <a href="#know">Conocimientos</a>
            </li>
            <li>
-             <a href="#popular">Futuro</a>
+             <a href="#future">Futuro</a>
            </li>
            <li>
              <a href="#gallery">Galería</a>
@@ -48,7 +50,7 @@
    <a href="#know">Proyectos</a>
  </li>
  <li>
-   <a href="#popular">Futuro</a>
+   <a href="#future">Futuro</a>
  </li>
  <li>
    <a href="#gallery">Galería</a>
@@ -56,7 +58,7 @@
 </ul>
 
 
-<section id="home" class="section-data">
+<section id="home" class="section-data scrollspy">
   <div class = "iris">
    <div class="row" style="margin-bottom:0px !important">
     <div class="col s12 m4 offset-m4">
@@ -68,6 +70,7 @@
         <div class="card-content">
           <p>Alumno de Ingeniería de Software en la Escuela Técnica Superior de Sistemas Informáticos de la UPM. Entusiasta de
           la programación y el diseño en varios lenguajes como java, C y Python.</p>
+          
         </div>
         <div class="container center">
           <div class="row">
@@ -104,7 +107,7 @@
 </section>
 
 <!-- Section: projects-->
-<section id= know class="section section-projects grey lighten-3 center">
+<section id="know" class="section section-projects grey lighten-3 center scrollspy">
   <div class="container">
     <div class="row">
       <div class="col s12 m4">
@@ -132,7 +135,7 @@
   </div>
 </section>
 
-<section id="popular" class="section section-popular scrollspy">
+<section id="future" class="section section-future scrollspy">
   <div class="container">
     <div class="row">
       <h4 class="center"><span class="blue-text text-darken-3">Proyectos</span> Actuales</h4>
@@ -173,6 +176,12 @@
   </div>
 </section>
 
+<div class="fixed-action-btn">
+  <a href="#home" class="btn-floating btn-large blue">
+    <i class="large material-icons">arrow_upward</i>
+  </a>
+</div>
+
 
 <!-- Section: Footer -->
 <footer class="section blue darken-3 white-text center">
@@ -183,6 +192,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <script>
+	const ss = document.querySelectorAll('.scrollspy');
+       M.ScrollSpy.init(ss, {});
+
   const sideNav = document.querySelector('.sidenav');
   M.Sidenav.init(sideNav, {});
 
