@@ -1,205 +1,348 @@
   <!DOCTYPE html>
   <html>
   <head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  	<!--Import Google Icon Font-->
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	<!--Import materialize.css-->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-    <link rel="stylesheet" href="css/main.css">
+  	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  	<link rel="stylesheet" href="css/main.css">
 
-    <title>Luis de la Cal</title>
+  	<!--Let browser know website is optimized for mobile-->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  	<title>Luis de la Cal</title>
   </head>
 
   <body>
-    <div class="navbar-fixed">
-      <nav class="blue darken-3">
-       <div class="container">
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo truncate" id="title">Luis de la Cal</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li>
-             <a href="#home">Home</a>
-           </li>
-           <li>
-             <a href="#know">Conocimientos</a>
-           </li>
-           <li>
-             <a href="#future">Futuro</a>
-           </li>
-           <li>
-             <a href="#gallery">Galería</a>
-           </li>
-         </ul>
-       </div>
-     </div>
-   </nav>
- </div>
- <ul class="sidenav" id="mobile-demo">
-  <li>
-   <a href="#home">Conocimientos</a>
- </li>
- <li>
-   <a href="#know">Proyectos</a>
- </li>
- <li>
-   <a href="#future">Futuro</a>
- </li>
- <li>
-   <a href="#gallery">Galería</a>
- </li>
-</ul>
+  	<!-- Navbar and left menu on mobile -->
+  	<div class="navbar-fixed">
+  		<nav class="blue darken-3">
+  			<div class="container">
+  				<div class="nav-wrapper">
+  					<a href="#!" class="brand-logo truncate" id="title">Luis de la Cal</a>
+  					<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  					<ul class="right hide-on-med-and-down">
+  						<li>
+  							<a href="#home">Home</a>
+  						</li>
+  						<li>
+  							<a href="#know">Conocimientos</a>
+  						</li>
+  						<li>
+  							<a href="#projects">Proyectos</a>
+  						</li>
+  						<li>
+  							<a href="#gallery">Galería</a>
+  						</li>
+  						<li>
+  							<a class="modal-trigger" href="#modal1">
+  								<i class="material-icons right">search</i>Buscar
+  							</a>
+  						</li>
+  					</ul>
+  				</div>
+  			</div>
+  		</nav>
+  	</div>
+  	<ul class="sidenav" id="mobile-demo">
+  		<li>
+  			<a href="#home">Home</a>
+  		</li>
+  		<li>
+  			<a href="#know">Conocimiento</a>
+  		</li>
+  		<li>
+  			<a href="#projects">Proyectos</a>
+  		</li>
+  		<li>
+  			<a href="#gallery">Galería</a>
+  		</li>
+  		<li>
+  			<a class="modal-trigger" href="#modal1">
+  				<i class="material-icons right">search</i>Buscar
+  			</a>
+  		</li>
+  	</ul>
 
-
-<section id="home" class="section-data scrollspy">
-  <div class = "iris">
-   <div class="row" style="margin-bottom:0px !important">
-    <div class="col s12 m4 offset-m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="img/profile2.jpg"/>
-          <span class="card-title">Luis de la Cal</span>
-        </div>
-        <div class="card-content">
-          <p>Alumno de Ingeniería de Software en la Escuela Técnica Superior de Sistemas Informáticos de la UPM. Entusiasta de
-          la programación y el diseño en varios lenguajes como java, C y Python.</p>
-          
-        </div>
-        <div class="container center">
-          <div class="row">
-            <div class="col s12">
-              <a href="https://www.facebook.com/luisaceo.marieterevilla" class="blue-text text-darken-3">
-                <i class="fab fa-facebook fa-3x"></i>
-              </a>
-              <a href="https://github.com/luiscal4a" class="blue-text text-darken-3">
-                <i class="fab fa-github fa-3x"></i>
-              </a>
-              <a href="https://plus.google.com/111713291788481739870" class="blue-text text-darken-3">
-                <i class="fab fa-google-plus fa-3x"></i>
-              </a>
-              <a href="https://www.instagram.com/luis_calgarcia/" class="blue-text text-darken-3">
-                <i class="fab fa-instagram fa-3x"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+  	<div class="modal-content">
+  		<h4>Busca palabras en la web</h4>
+  		<input id="searchInput" type="text" size="32" placeholder="Search words">
+  	</div>
+  	<div class="modal-footer">
+  		<a href="#" onclick="removeHighlight()" class="blue darken-3 white-text modal-close modal-action waves-effect waves-blue btn-flat">Borrar Marcador</a>
+  		<a href="#" onclick="highlight()" class="blue darken-3 white-text modal-close modal-action waves-effect waves-blue btn-flat">Buscar</a>
+  	</div>
   </div>
-</section>
 
-<!-- Section: quote-->
-<section class="section blue darken-3 center">
-  <div class="container">
-    <div class="row">
-      <div class="col s12">
-        <h4 class="white-text">"Every great dream begins with a dreamer"</h4>
-      </div>
-    </div>
+  <div id=search-para>
+  	<!-- Section: home -->
+  	<section id="home" class="section-home scrollspy">
+  		<div class = "iris">
+  			<div class="row" style="margin-bottom:0px !important">
+  				<div class="col s12 m4 offset-m4">
+  					<div class="card">
+  						<div class="card-image">
+  							<img src="img/profile2.jpg"/>
+  							<span class="card-title">Luis de la Cal</span>
+  						</div>
+  						<div class="card-content">
+  							<p>Alumno de Ingeniería de Software en la Escuela Técnica Superior de Sistemas Informáticos de la UPM. Entusiasta de
+  							la programación y el diseño en varios lenguajes como java, C y Python.</p>
+
+  						</div>
+  						<div class="container center">
+  							<div class="row">
+  								<div class="col s12">
+  									<a href="https://www.facebook.com/luisaceo.marieterevilla" class="blue-text text-darken-3">
+  										<i class="fab fa-facebook fa-3x"></i>
+  									</a>
+  									<a href="https://github.com/luiscal4a" class="blue-text text-darken-3">
+  										<i class="fab fa-github fa-3x"></i>
+  									</a>
+  									<a href="https://t.me/neunundneunzig_luftballons" class="blue-text text-darken-3">
+  										<i class="fab fa-telegram fa-3x"></i>
+  									</a>
+  									<a href="https://www.instagram.com/luis_calgarcia/" class="blue-text text-darken-3">
+  										<i class="fab fa-instagram fa-3x"></i>
+  									</a>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</section>
+
+  		<!-- Section: quote-->
+  		<section class="section blue darken-3 center">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col s12">
+  						<h4 class="white-text">"Every great dream begins with a dreamer"</h4>
+  					</div>
+  				</div>
+  			</div>
+  		</section>
+
+  		<!-- Section: know-->
+  		<section id="know" class="section section-know grey lighten-3 center scrollspy">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col s12 m4">
+  						<div class="card-panel">
+  							<i class="material-icons large blue-text text-darken-3">videogame_asset</i>
+  							<h4>Videojuegos</h4>
+  							<p>Diseño y desarrollo de videojuegos en Java y Unity3D </p>
+  						</div>
+  					</div>
+  					<div class="col s12 m4">
+  						<div class="card-panel">
+  							<i class="material-icons large blue-text text-darken-3">free_breakfast</i>
+  							<h4>Java</h4>
+  							<p>Creación de complejos programas y algoritmos en Java</p>
+  						</div>
+  					</div>
+  					<div class="col s12 m4">
+  						<div class="card-panel">
+  							<i class="material-icons large blue-text text-darken-3">brush</i>
+  							<h4>Diseño</h4>
+  							<p id="search-para">Diseño de personajes y nivel principiante de desarrollo web</p>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</section>
+
+
+  		<!-- Section: projects -->
+  		<section id="projects" class="section section-projects scrollspy">
+  			<div class="container">
+  				<div class="row">
+  					<h4 class="center"><span class="blue-text text-darken-3">Proyectos</span> Actuales</h4>
+  					<div class="col s12 m4">
+  						<div class="card">
+  							<div class="card-image">
+  								<img src="img/future1.png">
+  								<span class="card-title">Telegram BOT</span>
+  							</div>
+  							<div class="card-content">
+  								Desarrollo de comandos de bots de Telegram diseñados en python para ayudar a los usuarios a acceder a información escolar
+  							</div>
+  						</div>
+  					</div>
+  					<div class="col s12 m4">
+  						<div class="card">
+  							<div class="card-image">
+  								<img src="img/future2.png"">
+  								<span class="card-title">Lyric Detection</span>
+  							</div>
+  							<div class="card-content">
+  								Creación de un bot que encuentra la letra de una canción a partir de su nombre y cantante realizando web scraping con python
+  							</div>
+  						</div>
+  					</div>
+  					<div class="col s12 m4">
+  						<div class="card">
+  							<div class="card-image">
+  								<img src="img/future3.png"">
+  								<span class="card-title">Web Design</span>
+  							</div>
+  							<div class="card-content">
+  								Estudio y aprendizaje del desarrollo web usando frameworks como Materialize css y usando diferentes herramientas visuales
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</section>
+  	</div>
+
+  	<!-- Section: Gallery -->
+
+  	<section id="gallery" class="section section-gallery scrollspy grey lighten-3 ">
+  		<div class="container">
+  			<h4 class="center">
+  				Galería
+  			</h4>
+  			<div class="row">
+  				<div class="col s12 m3">
+  					<img src="img/gal1.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal2.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal3.png" class="materialboxed responsive-img"">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal4.png" class="materialboxed responsive-img">
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col s12 m3">
+  					<img src="img/gal5.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal6.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal7.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal8.png" class="materialboxed responsive-img">
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col s12 m3">
+  					<img src="img/gal9.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal10.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal11.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal12.png" class="materialboxed responsive-img">
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col s12 m3">
+  					<img src="img/gal13.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal14.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal15.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal16.png" class="materialboxed responsive-img">
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col s12 m3">
+  					<img src="img/gal17.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal18.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal19.png" class="materialboxed responsive-img">
+  				</div>
+  				<div class="col s12 m3">
+  					<img src="img/gal20.png" class="materialboxed responsive-img">
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+  <!--Floating action button-->
+  <div class="fixed-action-btn">
+  	<a href="#" class="btn-floating btn-large blue back-to-top">
+  		<i class="large material-icons">arrow_upward</i>
+  	</a>
   </div>
-</section>
-
-<!-- Section: projects-->
-<section id="know" class="section section-projects grey lighten-3 center scrollspy">
-  <div class="container">
-    <div class="row">
-      <div class="col s12 m4">
-        <div class="card-panel">
-          <i class="material-icons large blue-text text-darken-3">videogame_asset</i>
-          <h4>Videojuegos</h4>
-          <p>Diseño y desarrollo de videojuegos en Java y Unity3D </p>
-        </div>
-      </div>
-      <div class="col s12 m4">
-        <div class="card-panel">
-          <i class="material-icons large blue-text text-darken-3">free_breakfast</i>
-          <h4>Java</h4>
-          <p>Creación de complejos programas y algoritmos en Java</p>
-        </div>
-      </div>
-      <div class="col s12 m4">
-        <div class="card-panel">
-          <i class="material-icons large blue-text text-darken-3">brush</i>
-          <h4>Diseño</h4>
-          <p>Diseño de personajes y nivel principiante de desarrollo web</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="future" class="section section-future scrollspy">
-  <div class="container">
-    <div class="row">
-      <h4 class="center"><span class="blue-text text-darken-3">Proyectos</span> Actuales</h4>
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="img/future1.png">
-            <span class="card-title">Telegram BOT</span>
-          </div>
-          <div class="card-content">
-            Desarrollo de comandos de bots de Telegram diseñados en python para ayudar a los usuarios a acceder a información escolar
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="img/future2.png"">
-            <span class="card-title">Lyric Detection</span>
-          </div>
-          <div class="card-content">
-            Creación de un bot que encuentra la letra de una canción a partir de su nombre y cantante realizando web scraping con python
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="img/future3.png"">
-            <span class="card-title">Web Design</span>
-          </div>
-          <div class="card-content">
-            Estudio y aprendizaje del desarrollo web usando frameworks como Materialize css y usando diferentes herramientas visuales
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="fixed-action-btn">
-  <a href="#home" class="btn-floating btn-large blue">
-    <i class="large material-icons">arrow_upward</i>
-  </a>
-</div>
 
 
-<!-- Section: Footer -->
-<footer class="section blue darken-3 white-text center">
-  <p class="flow-text">Luis de la Cal 2018</p>
-</footer>
+  <!-- Section: Footer -->
+  <footer class="section blue darken-3 white-text center">
+  	<p class="flow-text">Luis de la Cal 2018</p>
+  </footer>
 
-<!--JavaScript at end of body for optimized loading-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<script>
-	const ss = document.querySelectorAll('.scrollspy');
-       M.ScrollSpy.init(ss, {});
+  <!--Smooth scrolling for menu buttons and sidenav functionality-->
+  <script>
+  	const ss = document.querySelectorAll('.scrollspy');
+  	M.ScrollSpy.init(ss, {});
 
-  const sideNav = document.querySelector('.sidenav');
-  M.Sidenav.init(sideNav, {});
+  	const sideNav = document.querySelector('.sidenav');
+  	M.Sidenav.init(sideNav, {});
 
-  const elems = document.querySelectorAll('.parallax');
-  M.Parallax.init(elems, {});
-</script>
+  	const modal = document.querySelectorAll('.modal');
+  	M.Modal.init(modal, {});
+
+       //Materia Boxed
+       const mb = document.querySelectorAll('.materialboxed');
+       M.Materialbox.init(mb, {});
+   </script>
+
+   <!--Smooth scrolling for floating button-->
+   <script type="text/javascript">
+   	$('a.back-to-top, a.simple-back-to-top').click(function() {
+   		$('html, body').animate({
+   			scrollTop: 0
+   		}, 700);
+   		return false;
+   	});
+   </script>
+
+   <script type="text/javascript" src="js/hilitor.js"></script>
+   <script type="text/javascript">
+
+   	var myHilitor = new Hilitor2("search-para");
+
+   	function highlight(){
+   		var text = document.getElementById("searchInput").value;
+   		if(text.length>0)myHilitor.apply(text);
+   		document.getElementById("searchInput").value = "";
+   	}
+
+   	function removeHighlight(){
+   		myHilitor.remove();
+   	}
+
+   </script>
+
 </body>
 </html>
