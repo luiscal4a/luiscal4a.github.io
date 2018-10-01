@@ -287,9 +287,9 @@
   </section>
   <!--Floating action button-->
   <div class="fixed-action-btn">
-  	<a href="#" class="btn-floating btn-large blue back-to-top">
+  	<div class="btn-floating btn-large blue back-to-top">
   		<i class="large material-icons">arrow_upward</i>
-  	</a>
+  	</div>
   </div>
 
 
@@ -319,7 +319,7 @@
 
    <!--Smooth scrolling for floating button-->
    <script type="text/javascript">
-   	$('a.back-to-top, a.simple-back-to-top').click(function() {
+   	$('div.back-to-top, a.simple-back-to-top').click(function() {
    		$('html, body').animate({
    			scrollTop: 0
    		}, 700);
