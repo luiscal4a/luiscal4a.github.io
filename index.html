@@ -206,7 +206,7 @@
   		</div>
 
   		<!-- Section: Gallery -->
-
+  		<!--
   		<section id="gallery" class="section section-gallery scrollspy grey lighten-3 ">
   			<div class="container">
   				<h4 class="center">
@@ -285,33 +285,34 @@
   			</div>
   		</div>
   	</section>
-  	
-  	<!--Floating action button-->
-  	<div class="fixed-action-btn">
-  		<a href="" class="btn-floating btn-large blue back-to-top">
-  			<i class="large material-icons">arrow_upward</i>
-  		</a>
-  	</div>
+  -->
+
+  <!--Floating action button-->
+  <div class="fixed-action-btn">
+  	<a href="#" class="btn-floating btn-large blue back-to-top">
+  		<i class="large material-icons">arrow_upward</i>
+  	</a>
+  </div>
 
 
-  	<!-- Section: Footer -->
-  	<footer class="section blue darken-3 white-text center">
-  		<p class="flow-text">Luis de la Cal 2018</p>
-  	</footer>
+  <!-- Section: Footer -->
+  <footer class="section blue darken-3 white-text center">
+  	<p class="flow-text">Luis de la Cal 2018</p>
+  </footer>
 
-  	<!--JavaScript at end of body for optimized loading-->
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  	<!--Smooth scrolling for menu buttons and sidenav functionality-->
-  	<script>
-  		const ss = document.querySelectorAll('.scrollspy');
-  		M.ScrollSpy.init(ss, {});
+  <!--Smooth scrolling for menu buttons and sidenav functionality-->
+  <script>
+  	const ss = document.querySelectorAll('.scrollspy');
+  	M.ScrollSpy.init(ss, {});
 
-  		const sideNav = document.querySelector('.sidenav');
-  		M.Sidenav.init(sideNav, {});
+  	const sideNav = document.querySelector('.sidenav');
+  	M.Sidenav.init(sideNav, {});
 
-  		const modal = document.querySelectorAll('.modal');
-  		M.Modal.init(modal, {});
+  	const modal = document.querySelectorAll('.modal');
+  	M.Modal.init(modal, {});
 
        //Materia Boxed
        const mb = document.querySelectorAll('.materialboxed');
@@ -326,13 +327,11 @@
    		}, 700);
    		return false;
    	});*/
-   	$(window).load(function() { // better to use $(document).ready(function(){
-   		$('a.back-to-top, a.simple-back-to-top').on('click touchstart', function() {
-   			$('html, body').animate({
-   				scrollTop: 0
-   			}, 700);
-   			return false;
-   		});
+   	$('a.back-to-top, a.simple-back-to-top').click(function() {
+   		$('html, body').animate({
+   			scrollTop: 0
+   		}, 700);
+   		return false;
    	});
 
    </script>
