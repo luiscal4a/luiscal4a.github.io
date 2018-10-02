@@ -205,8 +205,19 @@
   			</section>
   		</div>
 
+  		<!-- Section: Stars -->
+  		<section class="section blue darken-3 center">
+  				<div class="container">
+  					<div class="row">
+  						<div class="col s12">
+  							<h4 class="white-text starRating">
+  							</h4>
+  						</div>
+  					</div>
+  				</div>
+  			</section>
+
   		<!-- Section: Gallery -->
-  		
   		<section id="gallery" class="section section-gallery scrollspy grey lighten-3 ">
   			<div class="container">
   				<h4 class="center">
@@ -321,12 +332,6 @@
 
    <!--Smooth scrolling for floating button-->
    <script type="text/javascript">
-   	/*$('a.back-to-top, a.simple-back-to-top').click(function() {
-   		$('html, body').animate({
-   			scrollTop: 0
-   		}, 700);
-   		return false;
-   	});*/
    	$('a.back-to-top, a.simple-back-to-top').click(function() {
    		$('html, body').animate({
    			scrollTop: 0
@@ -335,6 +340,16 @@
    	});
 
    </script>
+
+   <!--Get stars from github repository-->
+   <script>
+    $.getJSON('https://api.github.com/repos/luiscal4a/luiscal4a.github.io', function(data) {
+        
+        var text = `Estrellas en repositorio de GitHub: ${data.stargazers_count}`
+        text = text.concat(" <i class=\"fas fa-star\"></i>");
+        $(".starRating").html(text);
+    });
+    </script>
 
    <script type="text/javascript" src="js/hilitor.js"></script>
    <script type="text/javascript">
