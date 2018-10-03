@@ -207,15 +207,16 @@
 
   		<!-- Section: Stars -->
   		<section class="section blue darken-3 center">
-  				<div class="container">
-  					<div class="row">
-  						<div class="col s12">
-  							<h4 class="white-text starRating">
-  							</h4>
-  						</div>
+  			<div class="container">
+  				<div class="row">
+  					<div class="col s12">
+  						<h4 id="starRating" class="white-text">
+  						</h4>
   					</div>
   				</div>
-  			</section>
+  			</div>
+  		</section>
+
 
   		<!-- Section: Gallery -->
   		<section id="gallery" class="section section-gallery scrollspy grey lighten-3 ">
@@ -296,8 +297,8 @@
   			</div>
   		</div>
   	</section>
-  
-  	
+
+
   	<!--Floating action button-->
   	<div class="fixed-action-btn">
   		<a href="#" class="btn-floating btn-large blue back-to-top">
@@ -306,24 +307,24 @@
   	</div>
 
 
-  <!-- Section: Footer -->
-  <footer class="section blue darken-3 white-text center">
-  	<p class="flow-text">Luis de la Cal 2018</p>
-  </footer>
+  	<!-- Section: Footer -->
+  	<footer class="section blue darken-3 white-text center">
+  		<p class="flow-text">Luis de la Cal 2018</p>
+  	</footer>
 
-  <!--JavaScript at end of body for optimized loading-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  	<!--JavaScript at end of body for optimized loading-->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <!--Smooth scrolling for menu buttons and sidenav functionality-->
-  <script>
-  	const ss = document.querySelectorAll('.scrollspy');
-  	M.ScrollSpy.init(ss, {});
+  	<!--Smooth scrolling for menu buttons and sidenav functionality-->
+  	<script>
+  		const ss = document.querySelectorAll('.scrollspy');
+  		M.ScrollSpy.init(ss, {});
 
-  	const sideNav = document.querySelector('.sidenav');
-  	M.Sidenav.init(sideNav, {});
+  		const sideNav = document.querySelector('.sidenav');
+  		M.Sidenav.init(sideNav, {});
 
-  	const modal = document.querySelectorAll('.modal');
-  	M.Modal.init(modal, {});
+  		const modal = document.querySelectorAll('.modal');
+  		M.Modal.init(modal, {});
 
        //Materia Boxed
        const mb = document.querySelectorAll('.materialboxed');
@@ -343,13 +344,45 @@
 
    <!--Get stars from github repository-->
    <script>
-    $.getJSON('https://api.github.com/repos/luiscal4a/luiscal4a.github.io', function(data) {
-        
-        var text = `Estrellas en repositorio de GitHub: ${data.stargazers_count}`
-        text = text.concat(" <i class=\"fas fa-star\"></i>");
-        $(".starRating").html(text);
-    });
-    </script>
+   	/*$.getJSON('https://api.github.com/repos/luiscal4a/luiscal4a.github.io', function(data) {
+
+   		var text = `Estrellas en repositorio de GitHub: ${data.stargazers_count}`
+   		text = text.concat(" <i class=\"fas fa-star\"></i>");
+   		$(".starRating").html(text);
+   	});*/
+   	document.addEventListener("DOMContentLoaded", function(){
+   		getStars();
+   	});
+
+   	function getStars(){
+   		loadJSON('https://api.github.com/repos/luiscal4a/luiscal4a.github.io',
+   			function(data) { console.log(data); },
+   			function(xhr) { console.error(xhr); }
+   			);
+   	}
+
+   	function loadJSON(path, success, error)
+   	{
+   		var xhr = new XMLHttpRequest();
+   		xhr.onreadystatechange = function()
+   		{
+   			if (xhr.readyState === XMLHttpRequest.DONE) {
+   				if (xhr.status === 200) {
+   					if (success){
+   						var myParsed =JSON.parse(xhr.responseText);
+   						console.log(myParsed.stargazers_count);
+   						document.getElementById("starRating").innerHTML= "Estrellas en repositorio de GitHub: "+ myParsed.stargazers_count + " <i class=\"fas fa-star\"></i>";
+   					}
+   				} else {
+   					if (error)
+   						error(xhr);
+   				}
+   			}
+   		};
+   		xhr.open("GET", path, true);
+   		xhr.send();
+   	}
+   </script>
 
    <script type="text/javascript" src="js/hilitor.js"></script>
    <script type="text/javascript">
@@ -367,6 +400,7 @@
    	}
 
    </script>
+
 
 </body>
 </html>
