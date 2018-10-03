@@ -212,10 +212,14 @@
   					<div class="col s12">
   						<h4 id="starRating" class="white-text">
   						</h4>
+  						<i class="loader fas fa-sync fa-spin fa-4x"></i>
   					</div>
   				</div>
   			</div>
   		</section>
+
+
+
 
 
   		<!-- Section: Gallery -->
@@ -372,6 +376,7 @@
    						var myParsed =JSON.parse(xhr.responseText);
    						console.log(myParsed.stargazers_count);
    						document.getElementById("starRating").innerHTML= "Estrellas en repositorio de GitHub: "+ myParsed.stargazers_count + " <i class=\"fas fa-star\"></i>";
+   						$("i.loader").remove();
    					}
    				} else {
    					if (error)
